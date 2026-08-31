@@ -192,7 +192,7 @@ for i, desenhar in enumerate(bandeiras):
     desenhar()
     screen.update()
     
-    if i < len(bandeiras) - 1:
+    if i < len(bandeiras) :
         time.sleep(15)
-
+    screen.bye()
 screen.mainloop()
