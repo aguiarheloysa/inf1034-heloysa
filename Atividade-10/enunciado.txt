@@ -1,0 +1,16 @@
+PRINCIPAL (900XP)
+- Devem ser feitos três histogramas diferentes visualmente no PyGame, cada um vindo de uma lista diferente;
+- A primeira lista de números deve ser aleatória e conter pelo menos 50 números (100XP);
+- A segunda lista de números deve ser estática (como mostrado em sala), porém com o total de números por 
+faixa deve ser aleatório, e a soma dos elementos não deve ultrapassar o total de números na lista estática (300XP);
+- A terceira lista deve ser criada através do input do usuário (200XP);
+- A quantidade de faixas/categorias deve ser diferente para cada histograma (100XP);
+- Os eixos x e y deve ser vistos e as marcações devem ser feitas, bem como na imagem mostrada em sala (100XP);
+- Cada categoria/faixa deve ter uma cor associada (isso deve ser genérico também, podendo cada cor ser aleatória para facilitar) (50XP);
+- O código que eu disponibilizei deve estar todo comentado, caso decisam usar e/ou copiar (50XP);
+
+EXTRA (200XP)
+- Cada histograma deve ser mostrado através de algum menu interativo (ex.: se eu clico em uma seta para a direita ele vai 
+para o próximo e assim por diante até voltar para o primeiro, mas não precisa ser exatamente assim);
+
+- Os dados do terceiro histograma devem vir de "inputs" do PyGame e não do input do Python;
