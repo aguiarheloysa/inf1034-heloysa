@@ -30,3 +30,37 @@ class ItemColetavel(pygame.sprite.Sprite):
     def update(self):
         self.tempo += 0.1
         self.rect.y = self.y_inicial + math.sin(self.tempo) * 5
+
+
+import os
+import pygame
+import math
+import random
+
+class ItemColetavel(pygame.sprite.Sprite):
+    def __init__(self, x, y, tipo="evidencia"):
+        super().__init__()
+        
+        diretorio_atual = os.path.dirname(__file__)
+        
+        imagens_possiveis = ['arma-batman.png', 'armadura-batman.jpg', 'laminas-batman.png']
+        
+        nome_arquivo = random.choice(imagens_possiveis)
+        caminho_imagem = os.path.join(diretorio_atual, 'assets', nome_arquivo)
+            
+        try:
+            self.image = pygame.image.load(caminho_imagem).convert_alpha()
+            self.image = pygame.transform.scale(self.image, (30, 30))
+        except (pygame.error, FileNotFoundError):
+            self.image = pygame.Surface((30, 30))
+            self.image.fill(random.choice([(255, 215, 0), (255, 100, 100), (100, 200, 255)]))
+
+        self.rect = self.image.get_rect(topleft=(x, y))
+        self.tipo = tipo
+        
+        self.y_inicial = y
+        self.tempo = random.randint(0, 10)
+
+    def update(self):
+        self.tempo += 0.1
+        self.rect.y = self.y_inicial + math.sin(self.tempo) * 5
